@@ -3,6 +3,5 @@ Name: Activator Haptic Feedback Listener
 Version: 1.0
 Architecture: iphoneos-arm
 Depends: firmware (>= 13.0), mobilesubstrate, libactivator
-Description: Adds Haptic Feedback Listener to Activator
-Maintainer: Tomasz Poliszuk
+Description: Adds Haptic Feedback Listener to Activator.
 Author: Tomasz Poliszuk

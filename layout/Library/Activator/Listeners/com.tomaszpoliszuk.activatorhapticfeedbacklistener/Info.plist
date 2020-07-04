@@ -1,5 +1,0 @@
-{
-	title = "Haptic Feedback";
-	description = "Triger native haptic feedback";
-	group = "System Actions";
-}

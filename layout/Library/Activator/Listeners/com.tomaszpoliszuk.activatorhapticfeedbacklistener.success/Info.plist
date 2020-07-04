@@ -1,0 +1,5 @@
+{
+	title = "Notification - 1 - success";
+	description = "Triger native 'Notification' haptic feedback";
+	group = "Haptic Feedback";
+}

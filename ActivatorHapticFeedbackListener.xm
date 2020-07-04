@@ -1,57 +1,192 @@
 #import <libactivator/libactivator.h>
 #import <UIKit/UIKit.h>
 
-@interface ActivatorHapticFeedbackListener : NSObject <LAListener> {
-}
+@interface ActivatorHapticFeedbackListenerLight : NSObject <LAListener>
 @end
-
-@implementation ActivatorHapticFeedbackListener
-
+@implementation ActivatorHapticFeedbackListenerLight
 + (void)load {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-
-	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener"];
-
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.light"];
 	[pool release];
 }
-
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-//	[(SBUIController *)[%c(SBUIController) sharedInstance] showAlertWithEvent:event];
 	if (@available(iOS 13.0, *)) {
-//		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleLight];
-//		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleMedium];
-		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleHeavy];
-
-//		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleSoft];
-//		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleRigid];
-
-//		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UINotificationFeedbackTypeSuccess];
-//		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UINotificationFeedbackTypeWarning];
-//		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UINotificationFeedbackTypeError];
-
-//		UISelectionFeedbackGenerator *generator = [[UISelectionFeedbackGenerator alloc] init];
-
-//		UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleHeavy];
+		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleLight];
 		[generator prepare];
 		[generator impactOccurred];
-
-//		[generator selectionChanged];
-//		[generator notificationOccurred:(notificationType)];
 		generator = nil;
 	}
 }
-
-//	- (void)activator:(LAActivator *)activator abortEvent:(LAEvent *)event {
-//	}
-//	
-//	- (void)activator:(LAActivator *)activator otherListenerDidHandleEvent:(LAEvent *)event {
-//	}
-//	
-//	- (void)activator:(LAActivator *)activator receiveDeactivateEvent:(LAEvent *)event {
-//	}
-
 - (void)dealloc {
 	[super dealloc];
 }
+@end
 
+@interface ActivatorHapticFeedbackListenerMedium : NSObject <LAListener>
+@end
+@implementation ActivatorHapticFeedbackListenerMedium
++ (void)load {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.medium"];
+	[pool release];
+}
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
+	if (@available(iOS 13.0, *)) {
+		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleMedium];
+		[generator prepare];
+		[generator impactOccurred];
+		generator = nil;
+	}
+}
+- (void)dealloc {
+	[super dealloc];
+}
+@end
+
+@interface ActivatorHapticFeedbackListenerHeavy : NSObject <LAListener>
+@end
+@implementation ActivatorHapticFeedbackListenerHeavy
++ (void)load {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.heavy"];
+	[pool release];
+}
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
+	if (@available(iOS 13.0, *)) {
+		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleHeavy];
+		[generator prepare];
+		[generator impactOccurred];
+		generator = nil;
+	}
+}
+- (void)dealloc {
+	[super dealloc];
+}
+@end
+
+@interface ActivatorHapticFeedbackListenerSoft : NSObject <LAListener>
+@end
+@implementation ActivatorHapticFeedbackListenerSoft
++ (void)load {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.soft"];
+	[pool release];
+}
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
+	if (@available(iOS 13.0, *)) {
+		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleSoft];
+		[generator prepare];
+		[generator impactOccurred];
+		generator = nil;
+	}
+}
+- (void)dealloc {
+	[super dealloc];
+}
+@end
+
+@interface ActivatorHapticFeedbackListenerRigid : NSObject <LAListener>
+@end
+@implementation ActivatorHapticFeedbackListenerRigid
++ (void)load {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.rigid"];
+	[pool release];
+}
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
+	if (@available(iOS 13.0, *)) {
+		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleRigid];
+		[generator prepare];
+		[generator impactOccurred];
+		generator = nil;
+	}
+}
+- (void)dealloc {
+	[super dealloc];
+}
+@end
+
+@interface ActivatorHapticFeedbackListenerSuccess : NSObject <LAListener>
+@end
+@implementation ActivatorHapticFeedbackListenerSuccess
++ (void)load {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.success"];
+	[pool release];
+}
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
+	if (@available(iOS 13.0, *)) {
+		UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
+		[generator prepare];
+		[generator notificationOccurred:UINotificationFeedbackTypeSuccess];
+		generator = nil;
+
+	}
+}
+- (void)dealloc {
+	[super dealloc];
+}
+@end
+
+@interface ActivatorHapticFeedbackListenerWarning : NSObject <LAListener>
+@end
+@implementation ActivatorHapticFeedbackListenerWarning
++ (void)load {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.warning"];
+	[pool release];
+}
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
+	if (@available(iOS 13.0, *)) {
+		UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
+		[generator prepare];
+		[generator notificationOccurred:UINotificationFeedbackTypeWarning];
+		generator = nil;
+	}
+}
+- (void)dealloc {
+	[super dealloc];
+}
+@end
+
+@interface ActivatorHapticFeedbackListenerError : NSObject <LAListener>
+@end
+@implementation ActivatorHapticFeedbackListenerError
++ (void)load {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.error"];
+	[pool release];
+}
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
+	if (@available(iOS 13.0, *)) {
+		UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
+		[generator prepare];
+		[generator notificationOccurred:UINotificationFeedbackTypeError];
+		generator = nil;
+	}
+}
+- (void)dealloc {
+	[super dealloc];
+}
+@end
+
+@interface ActivatorHapticFeedbackListenerSelection : NSObject <LAListener>
+@end
+@implementation ActivatorHapticFeedbackListenerSelection
++ (void)load {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	[[LAActivator sharedInstance] registerListener:[self new] forName:@"com.tomaszpoliszuk.activatorhapticfeedbacklistener.selection"];
+	[pool release];
+}
+- (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
+	if (@available(iOS 13.0, *)) {
+		UISelectionFeedbackGenerator *generator = [[UISelectionFeedbackGenerator alloc] init];
+		[generator prepare];
+		[generator selectionChanged];
+		generator = nil;
+	}
+}
+- (void)dealloc {
+	[super dealloc];
+}
 @end
