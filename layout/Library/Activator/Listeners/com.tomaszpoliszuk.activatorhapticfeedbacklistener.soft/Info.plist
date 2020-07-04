@@ -1,5 +1,5 @@
 {
 	title = "Impact - 5 - soft";
-	description = "Triger native 'Impact' haptic feedback";
+	description = "Trigger native 'Impact' haptic feedback";
 	group = "Haptic Feedback";
 }
