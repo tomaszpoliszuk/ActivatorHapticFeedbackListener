@@ -2,4 +2,5 @@
 	title = "Impact - 2 - Medium";
 	description = "Trigger native 'Impact' haptic feedback";
 	group = "Haptic Feedback";
+	"compatible-modes" = ("springboard", "lockscreen", "application");
 }

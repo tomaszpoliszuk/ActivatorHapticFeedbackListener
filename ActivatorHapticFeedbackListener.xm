@@ -28,12 +28,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleLight];
-		[generator prepare];
-		[generator impactOccurred];
-		generator = nil;
-	}
+	UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleLight];
+	[generator prepare];
+	[generator impactOccurred];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];
@@ -49,12 +47,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleMedium];
-		[generator prepare];
-		[generator impactOccurred];
-		generator = nil;
-	}
+	UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleMedium];
+	[generator prepare];
+	[generator impactOccurred];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];
@@ -70,12 +66,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleHeavy];
-		[generator prepare];
-		[generator impactOccurred];
-		generator = nil;
-	}
+	UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleHeavy];
+	[generator prepare];
+	[generator impactOccurred];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];
@@ -91,12 +85,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleSoft];
-		[generator prepare];
-		[generator impactOccurred];
-		generator = nil;
-	}
+	UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleSoft];
+	[generator prepare];
+	[generator impactOccurred];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];
@@ -112,12 +104,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleRigid];
-		[generator prepare];
-		[generator impactOccurred];
-		generator = nil;
-	}
+	UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc]initWithStyle:UIImpactFeedbackStyleRigid];
+	[generator prepare];
+	[generator impactOccurred];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];
@@ -133,13 +123,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
-		[generator prepare];
-		[generator notificationOccurred:UINotificationFeedbackTypeSuccess];
-		generator = nil;
-
-	}
+	UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
+	[generator prepare];
+	[generator notificationOccurred:UINotificationFeedbackTypeSuccess];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];
@@ -155,12 +142,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
-		[generator prepare];
-		[generator notificationOccurred:UINotificationFeedbackTypeWarning];
-		generator = nil;
-	}
+	UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
+	[generator prepare];
+	[generator notificationOccurred:UINotificationFeedbackTypeWarning];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];
@@ -176,12 +161,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
-		[generator prepare];
-		[generator notificationOccurred:UINotificationFeedbackTypeError];
-		generator = nil;
-	}
+	UINotificationFeedbackGenerator *generator = [[UINotificationFeedbackGenerator alloc] init];
+	[generator prepare];
+	[generator notificationOccurred:UINotificationFeedbackTypeError];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];
@@ -197,12 +180,10 @@
 	[pool release];
 }
 - (void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
-	if (@available(iOS 13.0, *)) {
-		UISelectionFeedbackGenerator *generator = [[UISelectionFeedbackGenerator alloc] init];
-		[generator prepare];
-		[generator selectionChanged];
-		generator = nil;
-	}
+	UISelectionFeedbackGenerator *generator = [[UISelectionFeedbackGenerator alloc] init];
+	[generator prepare];
+	[generator selectionChanged];
+	generator = nil;
 }
 - (void)dealloc {
 	[super dealloc];

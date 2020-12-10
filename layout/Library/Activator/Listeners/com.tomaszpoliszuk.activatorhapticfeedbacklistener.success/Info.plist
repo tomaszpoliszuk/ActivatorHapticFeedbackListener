@@ -2,4 +2,5 @@
 	title = "Notification - 1 - success";
 	description = "Trigger native 'Notification' haptic feedback";
 	group = "Haptic Feedback";
+	"compatible-modes" = ("springboard", "lockscreen", "application");
 }
